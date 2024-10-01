@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Fighter Jets and Tanks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d3d3d3;
+            background-size: cover; 
+            background-position: center; 
+        }
+        header {
+            background: rgba(56, 56, 56, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(230, 230, 230, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #383838;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .item {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #383838;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #383838;
+        }
+        footer a {
+            color: #383838;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Russian Jets and Tanks</h1>
+    <nav>
+        <a href="#jets" onclick="showJets()">Jets</a>
+        <a href="#tanks" onclick="showTanks()">Tanks</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for jets or tanks..." onkeyup="searchItems()">
+    </div>
+
+    <div id="jets" class="grid row">
+        <!-- Jet Items -->
+        <div class="item">
+            <h2>MiG-21</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb8dcba0b184d0abec610f/1acd1e79-8907-43b6-846a-4cfd57660721/preview.webp" alt="MiG-21 Fighter Jet">
+            <p>The MiG-21 is a supersonic jet fighter and interceptor aircraft developed by the Soviet Union...</p>
+        </div>
+        <div class="item">
+            <h2>MiG-23</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb8d8f2444117c4eda4065/96022538-1751-4d62-ac85-c6dadc250f6e/preview.webp" alt="MiG-23 Fighter Jet">
+            <p>The MiG-23 is a variable-geometry fighter aircraft developed in the 1960s...</p>
+        </div>
+        <div class="item">
+            <h2>MiG-24</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fba7f8debbc93c2b66ece4/66fba7f8debbc93c2b66ece2/preview.webp" alt="MiG-24 Fighter Jet">
+            <p>The MiG-24 is an advanced multirole fighter aircraft developed by the Mikoyan design bureau...</p>
+        </div>
+        <div class="item">
+            <h2>Su-27</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb8ca6885669f1ed7f919e/0e704bf1-9fa2-44da-a724-a9560fb679fd/preview.webp" alt="Su-27 Fighter Jet">
+            <p>The Su-27 is a twin-engine supermaneuverable fighter aircraft developed in the late 1970s...</p>
+        </div>
+        <div class="item">
+            <h2>Su-30</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fba846a0b184d0abf2a668/66fba846a0b184d0abf2a667/preview.webp" alt="Su-30 Fighter Jet">
+            <p>The Su-30 is a multirole fighter aircraft developed by Sukhoi...</p>
+        </div>
+        <div class="item">
+            <h2>Su-75</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fba8b8c64c3f93274033c1/66fba8b8c64c3f93274033c0/preview.webp" alt="Su-75 Fighter Jet">
+            <p>The Su-75, also known as Checkmate, is a next-generation stealth fighter...</p>
+        </div>
+    </div>
+
+    <div id="tanks" class="grid row" style="display: none;">
+        <!-- Tank Items -->
+        <div class="item">
+            <h2>T-90</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb8fb22444117c4edaa9bc/3dda5b91-2aea-4cd0-a541-6893c4bc0921/preview.webp" alt="T-90 Tank">
+            <p>The T-90 is a third-generation Russian battle tank, first produced in the late 1980s...</p>
+        </div>
+        <div class="item">
+            <h2>T-14 Armata</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb8f648d09830ee5e88a89/dfec2da5-b82d-46f1-bf34-be4c8c7c7bdf/preview.webp" alt="T-14 Armata Tank">
+            <p>The T-14 Armata is a modern Russian main battle tank introduced in 2015...</p>
+        </div>
+        <div class="item">
+            <h2>BMPT-Terminator</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb900fc64c3f93273a30dd/66fb900fc64c3f93273a30d9/preview.webp" alt="BMPT Terminator Tank">
+            <p>The BMPT-Terminator is a support combat vehicle designed to protect tanks...</p>
+        </div>
+        <div class="item">
+            <h2>T-80BVM</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fba9153b87994f75eb1ba9/66fba9153b87994f75eb1ba7/preview.webp" alt="T-80BVM Tank">
+            <p>The T-80BVM is an upgraded version of the T-80 main battle tank...</p>
+        </div>
+        <div class="item">
+            <h2>T-90M</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fba945885669f1ed869a26/66fba945885669f1ed869a25/preview.webp" alt="T-90M Tank">
+            <p>The T-90M is a modernized variant of the T-90 main battle tank...</p>
+        </div>
+        <div class="item">
+            <h2>T-72B3</h2>
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fba97ca0b184d0abf2f71b/66fba97ca0b184d0abf2f717/preview.webp" alt="T-72B3 Tank">
+            <p>The T-72B3 is an upgraded version of the T-72 main battle tank...</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Russian Jets and Tanks. All rights reserved. | For support, contact: 
+        <a href="mailto:JJU@ametikool.JJ">support@example.com</a>
+    </footer>
+</div>
+
+<script>
+    // Show jets by default
+    document.getElementById('jets').style.display = 'grid';
+
+    function showJets() {
+        document.getElementById('jets').style.display = 'grid';
+        document.getElementById('tanks').style.display = 'none'; // Hide tanks
+    }
+
+    function showTanks() {
+        document.getElementById('jets').style.display = 'none'; // Hide jets
+        document.getElementById('tanks').style.display = 'grid';
+    }
+
+    function searchItems() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            const text = item.innerText.toLowerCase();
+            item.style.display = text.includes(input) ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>
